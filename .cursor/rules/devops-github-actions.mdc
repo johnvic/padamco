@@ -1,0 +1,13 @@
+---
+description: DevOps — GitHub Actions CI/CD workflows and related automation
+globs: .github/**/*
+alwaysApply: false
+---
+
+# DevOps / GitHub Actions
+
+- **Scope**: CI/CD on **GitHub** using **GitHub Actions** (`.github/workflows/`, reusable workflows, environments, deployment jobs).
+- **Practices**: Least-privilege `permissions`, pin actions (SHA preferred), explicit tool versions, safe handling of secrets and fork PRs, separate CI checks from gated CD.
+- **Skill**: For full checklists and patterns, read `.cursor/skills/github-actions-cicd/SKILL.md`.
+
+When changing deploy targets or cloud auth, prefer **OIDC** over long-lived keys where supported.

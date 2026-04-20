@@ -1,0 +1,10 @@
+---
+description: Padayon Multipurpose Cooperative — Vue 3, TypeScript, Tailwind, responsive UI
+alwaysApply: true
+---
+
+# Padayon frontend
+
+- **Stack**: Vue 3 (Composition API, `<script setup lang="ts">`), TypeScript, Tailwind CSS. Mobile-first, accessible, performant defaults.
+- **Domain**: All UI for **Padayon Multipurpose Cooperative** (Southwest Cebu). Use approved mission, vision, values, and tagline from project skill—do not invent statutory or regulatory claims.
+- **Skill**: For full patterns, brand copy, and landing structure, read and follow `.cursor/skills/padayon-cooperative-frontend/SKILL.md`.
