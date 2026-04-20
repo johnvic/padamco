@@ -2,24 +2,26 @@
 name: padayon-cooperative-frontend
 description: >-
   Senior full-stack patterns for Padayon Multipurpose Cooperative web and
-  landing work using Vue 3, TypeScript, and Tailwind CSS with mobile-first
-  responsive design. Use when building or changing the Padayon site, landing
-  page, coop branding UI, or when the user mentions Padayon, Southwest Cebu
-  cooperative, or this repository’s frontend.
+  landing work using Vue 3, TypeScript, Tailwind CSS, and shadcn/ui
+  (shadcn-vue) with mobile-first responsive design and ESLint. Use when building
+  or changing the Padayon site, landing page, coop branding UI, or when the user
+  mentions Padayon, Southwest Cebu cooperative, or this repository’s frontend.
 ---
 
 # Padayon Cooperative — Frontend Skill
 
 ## When to apply
 
-Use this skill for all UI/UX and frontend implementation for **Padayon Multipurpose Cooperative** (public site, landing page, marketing sections, member-facing surfaces). Prefer **Vue 3 + TypeScript + Tailwind** unless the repo already standardizes otherwise—then align with repo conventions first.
+Use this skill for all UI/UX and frontend implementation for **Padayon Multipurpose Cooperative** (public site, landing page, marketing sections, member-facing surfaces). Standard stack: **Vue 3 + TypeScript + Tailwind + shadcn/ui (shadcn-vue)**—align with repo conventions if the project already pins specific versions or folder layout.
 
 ## Stack (senior defaults)
 
 - **Vue 3**: Composition API and `<script setup lang="ts">`. Use `defineProps` / `defineEmits` with explicit types; extract reusable logic into **composables** (`use*`).
 - **TypeScript**: Strict, explicit types for props, emits, API shapes, and composable return values. Avoid `any`; use `unknown` + narrowing when needed.
-- **Tailwind CSS**: Utility-first; use design tokens via `tailwind.config` theme extension (colors, spacing, typography) rather than scattered arbitrary values. Mobile-first breakpoints (`sm:`, `md:`, `lg:`).
-- **Components**: Small, focused SFCs; name files clearly (`TheHeader.vue`, `BaseButton.vue` or project convention). Keep pages thin; move logic to composables or stores only when shared state is required.
+- **Tailwind CSS**: Utility-first; extend theme and CSS variables in line with **shadcn-vue** (colors, radius, typography) so primitives stay consistent. Mobile-first breakpoints (`sm:`, `md:`, `lg:`).
+- **shadcn/ui (shadcn-vue)**: Use the **Vue** port ([shadcn-vue](https://www.shadcn-vue.com/))—add components with the project CLI into the agreed directory (typically `components/ui`). Treat components as **owned source**: compose and adapt locally rather than reimplementing the same primitives ad hoc. Prefer shadcn primitives for interactive UI (buttons, dialogs, forms, dropdowns, etc.) and keep branding via tokens + layout in page/section components.
+- **Components**: Small, focused SFCs for pages and domains; name files clearly (`TheHeader.vue`, or project convention). Keep pages thin; move logic to composables or stores only when shared state is required.
+- **ESLint**: Configured under `web/` (`eslint.config.js`). After adding or updating frontend files, run **`npm run lint`** from `web/`; use **`npm run lint:fix`** to auto-fix where possible. Treat a clean lint (or user-approved exceptions) as part of “done.”
 
 ## Responsive and accessibility
 
@@ -70,6 +72,7 @@ Implement in a order that matches design, but typically:
 
 ## Implementation checklist
 
+- [ ] **`npm run lint`** passes in `web/` after the change (or documented waiver).
 - [ ] Layout works at 320px width without horizontal scroll (except intentional full-bleed media).
 - [ ] Typography scales across breakpoints; readable line length on large screens.
 - [ ] Interactive states: hover, focus, active, disabled for buttons and links.

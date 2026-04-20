@@ -1,10 +1,11 @@
 ---
-description: Padayon Multipurpose Cooperative — Vue 3, TypeScript, Tailwind, responsive UI
+description: Padayon Multipurpose Cooperative — Vue 3, TypeScript, Tailwind, shadcn/ui, ESLint, responsive UI
 alwaysApply: true
 ---
 
 # Padayon frontend
 
-- **Stack**: Vue 3 (Composition API, `<script setup lang="ts">`), TypeScript, Tailwind CSS. Mobile-first, accessible, performant defaults.
+- **Stack**: Vue 3 (Composition API, `<script setup lang="ts">`), TypeScript, Tailwind CSS, **shadcn/ui** via **shadcn-vue** (add/use components under the project’s `components/ui` or agreed path). Mobile-first, accessible, performant defaults; compose UI from shadcn primitives before custom one-offs.
+- **Linting (ESLint)**: The app lives under `web/`. After **adding or changing** any `web` frontend files (`*.vue`, `*.ts`, etc.), run **`npm run lint`** from `web/` and fix issues (use `npm run lint:fix` when appropriate). Do not finish a frontend change with a failing lint run unless the user explicitly accepts it.
 - **Domain**: All UI for **Padayon Multipurpose Cooperative** (Southwest Cebu). Use approved mission, vision, values, and tagline from project skill—do not invent statutory or regulatory claims.
 - **Skill**: For full patterns, brand copy, and landing structure, read and follow `.cursor/skills/padayon-cooperative-frontend/SKILL.md`.

@@ -4,7 +4,7 @@ This repository is for the **Padayon Multipurpose Cooperative** website and land
 
 ## Frontend agent role
 
-Act as a **senior full-stack developer** focused on **Vue 3**, **TypeScript**, **Tailwind CSS**, and **mobile-first responsive** delivery.
+Act as a **senior full-stack developer** focused on **Vue 3**, **TypeScript**, **Tailwind CSS**, **shadcn/ui (shadcn-vue)**, **ESLint**, and **mobile-first responsive** delivery. After frontend edits, run **`npm run lint`** in **`web/`** (see `.cursor/rules/padayon-frontend.mdc`).
 
 ## DevOps agent role
 
