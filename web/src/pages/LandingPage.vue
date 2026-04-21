@@ -108,7 +108,7 @@ const visionText =
             <div class="mt-8 flex w-full justify-start md:justify-center lg:justify-start">
               <Button
                 as="a"
-                href="/login"
+                href="https://app.padamco.com"
                 size="lg"
                 class="h-12 gap-2 rounded-lg bg-brand-forest px-6 text-base font-semibold text-white hover:bg-brand-forest/90 dark:bg-[#2d6b52] dark:text-white dark:hover:bg-[#256047]"
               >
