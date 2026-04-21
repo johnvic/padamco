@@ -27,6 +27,7 @@ defineOptions({
 const props = withDefaults(defineProps<SheetContentProps>(), {
   side: 'right',
   showCloseButton: true,
+  class: undefined,
 })
 const emits = defineEmits<DialogContentEmits>()
 
@@ -51,7 +52,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         data-slot="sheet-close"
         as-child
       >
-        <Button variant="ghost" class="absolute top-3 right-3" size="icon-sm">
+        <Button
+          variant="ghost"
+          class="absolute top-3 right-3"
+          size="icon-sm"
+        >
           <XIcon />
           <span class="sr-only">Close</span>
         </Button>

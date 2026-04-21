@@ -7,10 +7,18 @@ import { Primitive } from 'reka-ui'
 import { cn } from '@/lib/utils'
 import { badgeVariants } from '.'
 
-const props = defineProps<PrimitiveProps & {
-  variant?: BadgeVariants['variant']
-  class?: HTMLAttributes['class']
-}>()
+const props = withDefaults(
+  defineProps<
+    PrimitiveProps & {
+      variant?: BadgeVariants['variant']
+      class?: HTMLAttributes['class']
+    }
+  >(),
+  {
+    variant: 'default',
+    class: undefined,
+  },
+)
 
 const delegatedProps = reactiveOmit(props, 'class')
 </script>

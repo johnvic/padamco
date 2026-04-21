@@ -21,4 +21,11 @@ export default tseslint.config(
       },
     },
   },
+  {
+    files: ['src/components/ui/**/*.vue'],
+    rules: {
+      // shadcn-vue primitives use PascalCase file names that match HTML element names
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 )
